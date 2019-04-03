@@ -58,7 +58,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import CrudMenu from './components/CrudMenu.vue'
 // import CrudContainer from './components/CrudContainer.vue'
 // import CrudPopup from './components/CrudPopup.vue'
-// import { routerData } from './utils/router'
+import { routerData } from './utils/router'
 // import appConfig from './app-config'
 
 
@@ -83,7 +83,7 @@ export default {
     return {
       menuItems: getMenuItems(),
       // appConfig,
-      // routerData
+      routerData
     }
   }
 }

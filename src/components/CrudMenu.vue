@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     isActive(item) {
-      return item.route && routerData.routeName === item.route.slice(1)
+      return item.route && routerData.routeName == item.route.slice(1)
     },
     itemClicked(item, event) {
       setRoute(event, item.route)
