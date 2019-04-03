@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <!-- <crud-popup></crud-popup> -->
+    <crud-popup></crud-popup>
     <!-- Top navbar -->
     <nav class="navbar bg-dark">
       <div class="container-fluid">
@@ -26,7 +26,7 @@
         <div class="col-sm-9">
           <!-- Main goes here -->
           <div id="crud-content" class="well">
-            <!-- <crud-container :config="appConfig" /> -->
+            <crud-container :config="appConfig" />
           </div>
         </div>
       </div>
@@ -56,10 +56,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import CrudMenu from './components/CrudMenu.vue'
-// import CrudContainer from './components/CrudContainer.vue'
-// import CrudPopup from './components/CrudPopup.vue'
+import CrudContainer from './components/CrudContainer.vue'
+import CrudPopup from './components/CrudPopup.vue'
 import { routerData } from './utils/router'
-// import appConfig from './app-config'
+import appConfig from './app-config'
 
 
 function getMenuItems() {
@@ -76,13 +76,13 @@ export default {
   name: 'App',
   components: {
     CrudMenu,
-    // CrudContainer,
-    // CrudPopup
+    CrudContainer,
+    CrudPopup
   },
   data() {
     return {
       menuItems: getMenuItems(),
-      // appConfig,
+      appConfig,
       routerData
     }
   }

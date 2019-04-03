@@ -1,5 +1,3 @@
-import 'whatwg-fetch'
-
 const crudApi = {
 	getAll(apicfg, route) {
 		return fetch(getURL(apicfg, 'getAll', route))
