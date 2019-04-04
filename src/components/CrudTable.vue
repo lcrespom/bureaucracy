@@ -22,6 +22,7 @@
 							:key="button.text + rownum"
 							@click="action(button.event, row)"
 							:class="`btn btn-${button.style} btn-sm text-white`">
+							<i :class="button.icon"></i>
 							{{button.text}}
 						</a>
 						<span class="mr-1" :key="'span-' + button.text + rownum"/> <!-- some breathing space between buttons -->
@@ -74,10 +75,10 @@ export default {
 
 	helpers: {
 		editButton: {
-			style: 'warning', icon: 'pencil', text: 'Edit', event: 'edit'
+			style: 'warning', icon: 'fas fa-pen', text: 'Edit', event: 'edit'
 		},
 		removeButton: {
-			style: 'danger', icon: 'trash', text: 'Remove', event: 'remove'
+			style: 'danger', icon: 'far fa-trash-alt', text: 'Remove', event: 'remove'
 		}
 	}
 }

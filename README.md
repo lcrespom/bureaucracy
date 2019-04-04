@@ -72,7 +72,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ## ToDo
-- Add missing icons
 - Implement bureaucracy
 	- Implement full functionality to ensure framework meets expectations
 - Setup main layout

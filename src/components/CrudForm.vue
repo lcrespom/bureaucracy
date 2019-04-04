@@ -15,10 +15,12 @@
 		<div class="form-group">
 			<div class="col-sm-12 text-center">
 				<button class="btn btn-primary" type="submit">
+					<i class="fas fa-check"></i>
 					Save
 				</button>
 				&nbsp;&nbsp;
 				<a class="btn btn-info text-white" @click="cancel">
+					<i class="fas fa-times"></i>
 					Cancel
 				</a>
 			</div>

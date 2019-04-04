@@ -13,10 +13,12 @@
           <!-- Table title buttons -->
           <span class="table-title-buttons">
             <button class="btn btn-info">
+							<i class="fas fa-search"></i>
               Search
             </button>
             &nbsp;
             <button class="btn btn-primary" @click="newRow($event)">
+							<i class="fas fa-plus"></i>
               New
             </button>
           </span>
