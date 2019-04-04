@@ -5,22 +5,29 @@
 		</colgroup>
 		<thead>
 			<tr>
-				<th v-if="hasButtons" class="text-center">Action</th>
-				<th v-for="(col, idx) of config.labels" :class="getHeaderClass(idx)">{{col}}</th>
+				<th v-if="hasButtons" class="text-center border-top-0">Action</th>
+				<th
+					v-for="(col, idx) of config.labels" :key="idx"
+					:class="getHeaderClass(idx)"
+					class="border-top-0">
+					{{col}}
+				</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr v-for="row of data">
+			<tr v-for="(row, rownum) of data" :key="rownum">
 				<td v-if="hasButtons" class="text-center nowrap">
 					<template v-for="button of config.buttons">
-						<a @click="action(button.event, row)" :class="`btn btn-${button.style} btn-sm`">
-							<span :class="`glyphicon glyphicon-${button.icon}`" aria-hidden="true"></span>
+						<a
+							:key="button.text + rownum"
+							@click="action(button.event, row)"
+							:class="`btn btn-${button.style} btn-sm text-white`">
 							{{button.text}}
 						</a>
-						<span /> <!-- some breathing space between buttons -->
+						<span class="mr-1" :key="'span-' + button.text + rownum"/> <!-- some breathing space between buttons -->
 					</template>
 				</td>
-				<crud-table-cell v-for="(col, idx) of config.fields"
+				<crud-table-cell v-for="(col, idx) of config.fields" :key="idx"
 					:row="row" :col="col" :config="config" :idx="idx" />
 			</tr>
 		</tbody>

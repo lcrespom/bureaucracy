@@ -14,12 +14,10 @@
 		<div class="form-group">
 			<div class="col-sm-12 text-center">
 				<button class="btn btn-primary" type="submit">
-					<span aria-hidden="true" class="glyphicon glyphicon-ok"></span>
 					Save
 				</button>
 				&nbsp;&nbsp;
-				<a class="btn btn-info" @click="cancel">
-					<span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+				<a class="btn btn-info text-white" @click="cancel">
 					Cancel
 				</a>
 			</div>

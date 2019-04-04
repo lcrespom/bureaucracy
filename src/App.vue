@@ -25,7 +25,7 @@
         </div>
         <div class="col-sm-9">
           <!-- Main goes here -->
-          <div id="crud-content" class="well">
+          <div id="crud-content" class="card bg-light mt-3 p-3">
             <crud-container :config="appConfig" />
           </div>
         </div>

@@ -12,15 +12,13 @@
 					<h2 class="entity-title">{{title}}</h2>
           <!-- Table title buttons -->
           <span class="table-title-buttons">
-            <button accesskey="B" class="btn btn-info">
-              <span aria-hidden="true" class="glyphicon glyphicon-search"></span>
+            <button class="btn btn-info">
               Search
             </button>
             &nbsp;
-            <a class="btn btn-primary" @click="$emit('newRow')">
-              <span aria-hidden="true" class="glyphicon glyphicon-plus"></span>
+            <button class="btn btn-primary" @click="newRow($event)">
               New
-            </a>
+            </button>
           </span>
           <!-- End of table title buttons -->
 				</div>
