@@ -83,8 +83,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 		- Search button at top of table
 - Generic components
 	- ~~Menu~~
-	- ~~Table~~: update Bootstrap Version
-	- ~~Form~~: update Bootstrap Version
+	- ~~Table~~
+	- ~~Form~~
 	- ~~Popup~~: update Bootstrap Version
 		- ~~Loading... => open it when using the REST API~~
 		- ~~Confirm (yes/no) => use it to confirm delete~~

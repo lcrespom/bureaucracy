@@ -1,10 +1,11 @@
 <template>
 	<form class="form-horizontal" @submit="submit">
 		<template v-for="(field, idx) of config.fields">
-		<div class="form-group">
-			<label class="col-sm-3 control-label">{{config.labels[idx]}}</label>
+		<div class="form-group form-row" :key="idx">
+			<label class="col-sm-3 col-form-label text-right font-weight-bold">
+				{{config.labels[idx]}}
+			</label>
 			<div class="col-sm-9">
-				<!--<input class="form-control" v-model="data[field]">-->
 				<crud-input :data="data" :field="field" :config="config"
 					:focus="idx == 0" />
 			</div>
