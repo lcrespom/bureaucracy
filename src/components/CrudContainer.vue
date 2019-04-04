@@ -6,15 +6,27 @@
 		</div>
 		<!-- Route found -->
 		<template v-else-if="cfg">
-			<!-- Table -->
+			<!-- Table view -->
 			<template v-if="routerData.mode == 'table'">
 				<div class="entity-title-box">
 					<h2 class="entity-title">{{title}}</h2>
-					<crud-top-table-buttons @new="newRow"/>
+          <!-- Table title buttons -->
+          <span class="table-title-buttons">
+            <button accesskey="B" class="btn btn-info">
+              <span aria-hidden="true" class="glyphicon glyphicon-search"></span>
+              Search
+            </button>
+            &nbsp;
+            <a class="btn btn-primary" @click="$emit('newRow')">
+              <span aria-hidden="true" class="glyphicon glyphicon-plus"></span>
+              New
+            </a>
+          </span>
+          <!-- End of table title buttons -->
 				</div>
 				<crud-table :config="cfg.table" :data="tableData" @edit="editRow" @remove="removeRow" />
 			</template>
-			<!-- Form -->
+			<!-- Form view -->
 			<template v-else>
 				<div class="entity-title-box">
 					<h2 class="entity-title">{{title}}</h2>

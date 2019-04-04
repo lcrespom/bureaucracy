@@ -40,25 +40,8 @@ const restAPI = {
 }
 
 
-let CrudTopTableButtons = {
-	template: `
-		<span class="table-title-buttons">
-			<button accesskey="B" class="btn btn-info">
-				<span aria-hidden="true" class="glyphicon glyphicon-search"></span>
-				Search
-			</button>
-			&nbsp
-			<a class="btn btn-primary" @click="$emit('new')">
-				<span aria-hidden="true" class="glyphicon glyphicon-plus"></span>
-				New
-			</a>
-		</span>
-	`
-}
-
-
-const container = {
-	components: { CrudTable, CrudTopTableButtons, CrudForm },
+export default {
+	components: { CrudTable, CrudForm },
 	props: ['config'],
 	created() {
 		prepareConfig(this.config)
@@ -106,5 +89,3 @@ const container = {
 		}
 	}
 }
-
-export default container
