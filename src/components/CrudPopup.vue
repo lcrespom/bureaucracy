@@ -11,15 +11,15 @@
 			<div class="modal-dialog" role="document" id="crud-modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header" :class="{ borderless: onlyMessage() }">
-						<button v-if="config.showClose || config.showOK" type="button" class="close"
-							@click="close(false)"
-							data-dismiss="modal" aria-label="Close">
+						<h5 class="modal-title" id="crud-popup-label">{{labels.title}}</h5>
+						<button v-if="config.showClose || config.showOK"
+							type="button" class="close" aria-label="Close"
+							@click="close(false)">
 							<span aria-hidden="true">&times;</span>
 						</button>
-						<h4 class="modal-title" id="crud-popup-label">{{labels.title}}</h4>
 					</div>
 					<div class="modal-body">
-						<div class="popup-message" v-html="labels.message"></div>
+						<div v-html="labels.message"></div>
 						<form v-if="config.showPrompt" class="popup-prompt"
 							@submit="$event.preventDefault(); close(true)">
 							<input v-model="result.prompt" id="crud-popup-prompt"
@@ -29,12 +29,12 @@
 					<div class="modal-footer" :class="{ borderless: onlyMessage() }">
 						<button v-if="config.showClose" type="button"
 							@click="close(false)" id="crud-popup-close"
-							class="btn btn-default popup-close" data-dismiss="modal">
+							class="btn btn-secondary">
 							{{labels.close}}
 						</button>
 						<button v-if="config.showOK" type="button"
 							@click="close(true)" id="crud-popup-ok"
-							class="btn btn-primary popup-ok" data-dismiss="modal">
+							class="btn btn-primary">
 							{{labels.ok}}
 						</button>
 					</div>
