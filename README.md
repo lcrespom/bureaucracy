@@ -84,7 +84,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 	- ~~Menu~~
 	- ~~Table~~
 	- ~~Form~~
-	- ~~Popup~~: update Bootstrap Version
+	- ~~Popup~~
 		- ~~Loading... => open it when using the REST API~~
 		- ~~Confirm (yes/no) => use it to confirm delete~~
 		- ~~Alert~~
