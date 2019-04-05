@@ -1,12 +1,17 @@
 <template>
   <div :class="cssClass">
     <template v-for="item of items">
-      <a v-if="item.route" :href="item.route" @click="itemClicked(item, $event)"
-        :class="{ active: isActive(item) }" class="list-group-item list-group-item-action bg-light">
+      <a v-if="item.route" :key="item.text"
+        :href="item.route"
+        @click="itemClicked(item, $event)"
+        :class="{ active: isActive(item) }"
+        class="list-group-item list-group-item-action bg-light">
         {{item.text}}
       </a>
-      <a v-if="item.url" :href="item.url"
-      :class="{ active: isActive(item) }" class="list-group-item list-group-item-action bg-light">
+      <a v-if="item.url" :key="item.text"
+        :href="item.url"
+        :class="{ active: isActive(item) }"
+        class="list-group-item list-group-item-action bg-light">
         {{item.text}}
       </a>
     </template>
