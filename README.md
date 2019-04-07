@@ -72,14 +72,10 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ## ToDo
+- Icons
+	- Use SVG instead of font, to avoid downloading the whole font file
 - Implement bureaucracy
 	- Implement full functionality to ensure framework meets expectations
-- Setup main layout
-	- ~~Left: side menu with all tables~~
-	- Right:
-		- ~~Item edit form~~
-		- ~~Table~~
-		- Search button at top of table
 - Generic components
 	- ~~Menu~~
 	- ~~Table~~
@@ -91,6 +87,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 		- ~~Keyboard support + focus management~~
 		- ~~Prompt~~
 - ~~Routing~~: check why `#` is not working
+- Search panel
 - ~~API backends~~
 	- ~~Get JSON data from json-generator.com~~
 	- ~~Get JSON data from resty~~
